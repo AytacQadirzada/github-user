@@ -17,7 +17,6 @@ const GitHub = () => {
       }
       });
   };
-
   const formatJoinedDate = (isoDate: string) => {
     const date = new Date(isoDate);
     const day = date.getDate();
@@ -27,7 +26,6 @@ const GitHub = () => {
     const year = date.getFullYear();
     return `Joined ${day} ${month} ${year}`;
   };
-
   return (
     <div className='bg-[#F5F7FF] w-full h-screen flex flex-col items-center justify-center !py-10 !px-4 gap-6 text-[#2b3442] font-mono'>
       <div className='w-full max-w-[800px] flex justify-between items-center'>
@@ -47,7 +45,7 @@ const GitHub = () => {
           placeholder='Search GitHub Username...'
           className='flex-1 outline-none bg-transparent text-base placeholder:text-[#4b6a9b] text-[20px]'
         />
-        <button onClick={() => searchUser(username)} className='bg-blue-500 text-white font-semibold !px-5 !py-2 rounded-lg hover:bg-blue-600 transition-all'>
+        <button onClick={() => searchUser()} className='bg-blue-500 text-white font-semibold !px-5 !py-2 rounded-lg hover:bg-blue-600 transition-all'>
           Search
         </button>
       </div>
