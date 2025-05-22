@@ -5,7 +5,7 @@ const GitHub = () => {
   const [username, setUsername] = useState<any>('');
   const [userData, setUserData] = useState<any>(null);
   const [notFound, setNotFound] = useState(false);
-  const searchUser = (e: any) => {
+  const searchUser = () => {
     fetch(`https://api.github.com/users/${username}`)
       .then((res) => res.json())
       .then((data) => {
